@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=VT323);
+
+@mixin transition {
+  opacity: 0;
+  @for $i from 1 through 9 {
+    &:nth-child(#{$i}) {
+      animation: fade-in .5s #{$i * .5}s ease forwards;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'VT323';
+}
+
+section {
+  height: 100vh;
+}
+
+figure {
+    position: absolute;
+    width: 18vw;
+    height: 18vw;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  h1 {
+    text-align: center;
+    font: 9.9vw 'VT323';
+    span {
+      @include transition;
+    }
+  }
+  .mushroom {
+    width: 18vw;
+    height: 18vw;
+    margin: 0 auto;
+    background: url('https://dl.dropbox.com/s/3ep1qay71wlqcgv/Screen%20Shot%202015-04-19%20at%202.32.23%20PM.png?dl=0') center/cover;
+    transform: scale(.25);
+    animation: scale-up 1s 4.5s ease-out forwards;
+  }
+  h3 {
+    text-align: center;
+    font: 3.4vw 'VT323';
+    opacity: 0;
+    animation: fade-bounce .5s 6s infinite ease-in-out;
+  }
+}
+
+article {
+  h1 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 6.6vw;
+  }
+}
+
+.sounds {
+  width: 85%;
+  margin: 0 auto;
+  .masonry-brick {
+    display: none;
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid black;
+    &.loaded {
+      display: block;
+    }
+    &.active {
+      border-color: limegreen;
+    }
+    &:hover .controls {
+      visibility: visible;
+    }
+    p {
+      white-space: wrap;
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 10px;
+      color: white;
+      background: rgba(black, .6);
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+  }
+}
+
+
+@keyframes fade-in {
+  100% {opacity: 1;}
+}
+
+@keyframes scale-up {
+  100% {transform: scale(.8);}
+}
+
+@keyframes fade-bounce {
+  50% {opacity: 1;}
+}

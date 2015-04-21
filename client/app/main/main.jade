@@ -1,0 +1,25 @@
+section
+  figure
+    h1
+      span Y
+      span O
+      span $
+      span #
+      span ! 
+      span  C
+      span R
+      span E
+      span W
+    .mushroom
+    h3(ng-click="login()") insert coin
+
+article
+  h1 Listen to YO$#!
+  .sounds(masonry column-width="100" plangular="https://soundcloud.com/yoshicrew/tracks")
+    .masonry-brick(ng-repeat="track in tracks" ng-class="{active: player.playing === track.src}")
+      h4 {{ track.user.username }}
+      p {{ track.title }}
+      p(ng-show="player.playing === track.src") {{ track.duration / 1000 - currentTime | hhmmss }}
+      .controls
+        i(class="fa fa-play" ng-click="playPause($index)" ng-hide="player.playing === track.src")
+        i(class="fa fa-pause" ng-click="playPause($index)" ng-show="player.playing === track.src")
