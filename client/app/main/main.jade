@@ -19,7 +19,18 @@ article
     .masonry-brick(ng-repeat="track in tracks" ng-class="{active: player.playing === track.src}")
       h4 {{ track.user.username }}
       p {{ track.title }}
+      p(ng-hide="player.playing === track.src") {{track.duration / 1000 | hhmmss}}
       p(ng-show="player.playing === track.src") {{ track.duration / 1000 - currentTime | hhmmss }}
+      .info
+        span
+          i(class="fa fa-headphones")
+          span {{ track.playback_count }}
+        span
+          i(class="fa fa-heart")
+          span {{ track.favoritings_count }}
+        span
+          i(class="fa fa-comments")
+          span {{ track.comment_count }}
       .controls
         i(class="fa fa-play" ng-click="playPause($index)" ng-hide="player.playing === track.src")
         i(class="fa fa-pause" ng-click="playPause($index)" ng-show="player.playing === track.src")
