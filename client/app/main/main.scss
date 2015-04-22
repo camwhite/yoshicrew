@@ -45,6 +45,7 @@ figure {
     text-align: center;
     font: 3.4vw 'VT323';
     opacity: 0;
+    cursor: pointer;
     animation: fade-bounce .5s 6s infinite ease-in-out;
   }
 }

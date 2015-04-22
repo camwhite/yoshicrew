@@ -7,7 +7,8 @@ angular.module 'yoshiCrewApp', [
   'btford.socket-io',
   'ui.router',
   'plangular',
-  'wu.masonry'
+  'wu.masonry',
+  'smoothScroll'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, plangularConfigProvider) ->
   $urlRouterProvider

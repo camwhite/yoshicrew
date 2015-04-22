@@ -12,10 +12,10 @@ section
       span E
       span W
     .mushroom
-    h3(ng-click="login()") insert coin
+    h3(scroll-to="player-heading") insert coin
 
 article
-  h1 Listen to YO$#!
+  h1(id="player-heading") Listen to YO$#!
   .sounds(masonry column-width="100" plangular="https://soundcloud.com/yoshicrew/tracks")
     .masonry-brick(ng-repeat="track in tracks" ng-class="{active: player.playing === track.src}")
       h4 {{ track.user.username }}
