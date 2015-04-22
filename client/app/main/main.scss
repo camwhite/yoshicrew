@@ -136,6 +136,7 @@ article {
   position: relative;
   padding-bottom: 100px;
   background: url('../../assets/images/brickwall_@2x.png') repeat;
+  overflow: hidden;
   h1 {
     text-align: center;
     font-size: 6.6vw;
@@ -143,6 +144,9 @@ article {
   form {
     width: 25%;
     margin: 2.5vh auto;
+    @media screen and (max-width: 540px) {
+      width: 80%;
+    }
     input {
       width: 80%;
       padding: 8px;
@@ -151,6 +155,9 @@ article {
       border-bottom: 2px solid black;
       outline: none;
       font: 22px 'VT323';
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
     }
     button {
       background: none;
