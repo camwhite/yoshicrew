@@ -64,7 +64,7 @@ article {
     display: none;
     position: relative;
     margin: 10px 0;
-    padding: 10px;
+    padding: 40px 10px;
     border: 2px solid black;
     &.loaded {
       display: block;
@@ -89,12 +89,22 @@ article {
     }
     .controls {
       position: absolute;
+      width: 100%;
       bottom: 0;
       right: 0;
       padding: 10px;
       color: white;
-      background: rgba(limegreen, .8);
+      background: linear-gradient(135deg,  #ff2247, #1e3f9f);
       visibility: hidden;
+      &.active  {
+        background: linear-gradient(135deg,  limegreen, #1e3f9f);
+      }
+      i {
+        margin: 0 3px;
+      }
+      @media screen and (max-width: 540px) {
+        visibility: visible;
+      }
     }
   }
 }

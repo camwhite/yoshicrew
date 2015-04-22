@@ -22,6 +22,7 @@ article
       p {{ track.title }}
       p(ng-hide="player.playing === track.src") {{track.duration / 1000 | hhmmss}}
       p(ng-show="player.playing === track.src") {{ track.duration / 1000 - currentTime | hhmmss }}
+      hr
       .info
         span
           i(class="fa fa-headphones")
@@ -32,6 +33,9 @@ article
         span
           i(class="fa fa-comments")
           span {{ track.comment_count }}
-      .controls
+      .controls(ng-class="{active: player.playing === track.src}")
+        i(class="fa fa-fast-backward" ng-click="previous()" ng-show="player.playing === track.src")
         i(class="fa fa-play" ng-click="playPause($index)" ng-hide="player.playing === track.src")
         i(class="fa fa-pause" ng-click="playPause($index)" ng-show="player.playing === track.src")
+        i(class="fa fa-fast-forward" ng-click="next()" ng-show="player.playing === track.src")
+
