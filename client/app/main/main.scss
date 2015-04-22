@@ -1,6 +1,6 @@
 @mixin transition {
   opacity: 0;
-  @for $i from 1 through 9 {
+  @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
       animation: fade-in .5s #{$i * .5}s ease forwards;
     }
@@ -89,12 +89,11 @@ article {
     }
     .controls {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      bottom: 0;
+      right: 0;
       padding: 10px;
       color: white;
-      background: rgba(black, .6);
-      transform: translate(-50%, -50%);
+      background: rgba(limegreen, .8);
       visibility: hidden;
     }
   }
