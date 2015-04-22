@@ -1,3 +1,25 @@
+@font-face {
+  font-family: A Dripping Marker;
+  src: url(https://dl.dropboxusercontent.com/s/1u0903qigxvyp2s/adrip1.ttf?dl=0)
+}
+
+@mixin randomizer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 115px;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  @for $i from 1 through 200 {
+    &:nth-child(#{$i}) {
+      top: percentage(random());
+      left: percentage(random());
+      color: hsl(80 * $i, percentage(random()), percentage(random()));
+      -webkit-text-stroke: 2px hsl(60 * $i, percentage(random()), percentage(random()));
+      z-index: $i;
+    }
+  }
+}
+
 @mixin transition {
   opacity: 0;
   @for $i from 1 through 10 {
@@ -110,6 +132,50 @@ article {
   }
 }
 
+.wall {
+  position: relative;
+  padding-bottom: 100px;
+  background: url('../../assets/images/brickwall_@2x.png') repeat;
+  h1 {
+    text-align: center;
+    font-size: 6.6vw;
+  }
+  form {
+    width: 25%;
+    margin: 2.5vh auto;
+    input {
+      width: 80%;
+      padding: 8px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid black;
+      outline: none;
+      font: 22px 'VT323';
+    }
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      font: 22px 'VT323';
+    }
+  }
+  .tags {
+    position: relative;
+    width: 65%;
+    height: 70vh;
+    margin: 10vh auto 0;
+    p {
+      @include randomizer;
+    }
+  }
+}
+
+footer {
+  padding: 80px 0 40px;
+  p {
+    text-align: center;
+  }
+}
 
 @keyframes fade-in {
   100% {opacity: 1;}

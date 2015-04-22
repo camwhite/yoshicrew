@@ -8,7 +8,8 @@ angular.module 'yoshiCrewApp', [
   'ui.router',
   'plangular',
   'wu.masonry',
-  'smoothScroll'
+  'smoothScroll',
+  'firebase'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, plangularConfigProvider) ->
   $urlRouterProvider

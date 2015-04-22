@@ -38,4 +38,13 @@ article
         i(class="fa fa-play" ng-click="playPause($index)" ng-hide="player.playing === track.src")
         i(class="fa fa-pause" ng-click="playPause($index)" ng-show="player.playing === track.src")
         i(class="fa fa-fast-forward" ng-click="next()" ng-show="player.playing === track.src")
+.wall
+  h1 Leave Your Mark
+  form
+    input(type="text" placeholder="Show Some Love" ng-model="tag" maxlength="25")
+    button(type="submit" ng-click="addTag()") Tag
+  .tags
+    p(ng-repeat="tag in tags") {{ tag.$value }}
 
+footer
+  p &copy;yoshicrew | 2015
