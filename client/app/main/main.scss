@@ -226,6 +226,9 @@ article {
   .insta {
     @include span(8 of 12);
     @include cf;
+    @media screen and (max-width: 540px) {
+      @include span(12 of 12);
+    }
     a {
       color: black;
       text-decoration: none;
@@ -240,6 +243,9 @@ article {
   }
   .twitter {
     @include span(4 of 12 last);
+    @media screen and (max-width: 540px) {
+      @include span(12 of 12);
+    }
   }
 }
 
