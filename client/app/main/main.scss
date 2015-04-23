@@ -50,7 +50,7 @@ figure {
     transform: translate(-50%, -50%);
   h1 {
     text-align: center;
-    font: 9.9vw 'VT323';
+    font: 10.9vw 'VT323';
     span {
       @include transition;
     }
@@ -76,7 +76,7 @@ article {
   h1 {
   margin: 10px 0;
   text-align: center;
-  font-size: 6.6vw;
+  font-size: 9.6vw;
   }
 }
 
@@ -135,11 +135,10 @@ article {
 .wall {
   position: relative;
   padding-bottom: 100px;
-  background: url('../../assets/images/brickwall_@2x.png') repeat;
   overflow: hidden;
   h1 {
     text-align: center;
-    font-size: 6.6vw;
+    font-size: 9.6vw;
   }
   form {
     width: 25%;
@@ -156,7 +155,7 @@ article {
       outline: none;
       font: 22px 'VT323';
       @media screen and (max-width: 540px) {
-        width: 100%;
+        width: 80%;
       }
     }
     button {

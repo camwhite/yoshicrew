@@ -18,17 +18,13 @@ angular.module 'yoshiCrewApp'
   $scope.tag = ''
 
   $scope.addTag = ->
-    trimTag()
-
-    $scope.tags.$add $scope.tag
-    $scope.tag = ''
-
-  trimTag = ->
     $scope.tags.$loaded().then (tags) ->
       tag = tags[0]
-      console.log tag
 
       if $scope.tags.length > 200
-        $scope.tags.$remove(tag).then (tags) ->
-      else
-        return
+        $scope.tags.$remove tag
+
+      $scope.tags.$add $scope.tag
+      $scope.tag = ''
+
+
