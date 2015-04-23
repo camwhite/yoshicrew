@@ -2,7 +2,7 @@
   - soundcloud streaming
   - firebase realtime time grafitti wall
   
-## Instal Instructions
+## Install Instructions
   1. Clone the repo
   2. In root dir run `npm install`
   3. In client dir run `bower install`
