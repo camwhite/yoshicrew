@@ -11,7 +11,8 @@ angular.module 'yoshiCrewApp', [
   'smoothScroll',
   'firebase',
   'twitter.timeline',
-  'ui.instagram'
+  'ui.instagram',
+  'socialLinks'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, plangularConfigProvider) ->
   $urlRouterProvider

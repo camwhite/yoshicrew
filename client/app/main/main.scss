@@ -49,6 +49,41 @@ section {
   height: 100vh;
 }
 
+.social-share {
+  position: fixed;
+  width: 3vw;
+  top: 50%;
+  left: 0;
+  z-index: 300;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: all .25s linear;
+  &.active {
+    opacity: 1;
+  }
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.4vw;
+    .fa {
+      width: 100%;
+      padding: 5px 0;
+      text-align: center;
+      &.fa-twitter {
+        background: #00aced;
+      }
+      &.fa-facebook {
+        width: 100%;
+        background: #3b5998;
+      }
+      &.fa-google {
+        background: #dd4b39;
+      }
+    }
+  }
+}
+
 figure {
     position: absolute;
     width: 18vw;
