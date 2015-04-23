@@ -9,7 +9,9 @@ angular.module 'yoshiCrewApp', [
   'plangular',
   'wu.masonry',
   'smoothScroll',
-  'firebase'
+  'firebase',
+  'twitter.timeline',
+  'ui.instagram'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, plangularConfigProvider) ->
   $urlRouterProvider

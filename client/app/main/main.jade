@@ -38,6 +38,20 @@ article
         i(class="fa fa-play" ng-click="playPause($index)" ng-hide="player.playing === track.src")
         i(class="fa fa-pause" ng-click="playPause($index)" ng-show="player.playing === track.src")
         i(class="fa fa-fast-forward" ng-click="next()" ng-show="player.playing === track.src")
+
+.feeds
+  h1 YO$#! Feeds
+  .insta
+    ui-instagram(user-id='176578740' client-id="5c46a2618d764034bb60e66cdb112ad9")
+      .grams(ng-repeat="gram in grams | limitTo:12")
+        a(ng-href="{{ gram.link }}")
+          img(ng-src="{{ gram.images.standard_resolution.url }}")
+          .likes
+            i(class="fa fa-heart")
+            span {{ gram.likes.count }}
+  .twitter
+    div(twitter-timeline="591269798752997377" auto-resize="true" data-tweet-limit="5")
+
 .wall
   h1 Leave Your Mark
   form

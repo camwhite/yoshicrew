@@ -6,8 +6,9 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 $susy: (
   global-box-sizing: border-box,
   columns: 12,
-  gutters: 1.5,
+  gutters: .25,
   math: fluid,
+  gutter-position: split,
 );
 
 /**
@@ -23,6 +24,11 @@ $susy: (
 
 html {
   overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 9.6vw;
 }
 
 // Component styles are injected through grunt

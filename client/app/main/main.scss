@@ -29,6 +29,14 @@
   }
 }
 
+@mixin cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -173,6 +181,30 @@ article {
     p {
       @include randomizer;
     }
+  }
+}
+
+.feeds {
+  @include cf;
+  width: 90%;
+  margin: 0 auto;
+  .insta {
+    @include span(8 of 12);
+    @include cf;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    .grams {
+      @include gallery(2 of 8);
+      margin: 20px 0;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .twitter {
+    @include span(4 of 12 last);
   }
 }
 
