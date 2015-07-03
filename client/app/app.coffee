@@ -12,7 +12,8 @@ angular.module 'yoshiCrewApp', [
   'firebase',
   'twitter.timeline',
   'ui.instagram',
-  'socialLinks'
+  'socialLinks',
+  'youtube-embed'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, plangularConfigProvider) ->
   $urlRouterProvider

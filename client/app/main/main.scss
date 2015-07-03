@@ -102,7 +102,7 @@ figure {
     width: 18vw;
     height: 18vw;
     margin: 0 auto;
-    background: url('https://dl.dropbox.com/s/3ep1qay71wlqcgv/Screen%20Shot%202015-04-19%20at%202.32.23%20PM.png?dl=0') center/cover;
+    background: url('https://dl.dropbox.com/s/3o713gfasfual7w/MushroomMan.png?dl=0') center/cover;
     transform: scale(.25);
     animation: scale-up 1s 4.5s ease-out forwards;
   }
@@ -168,7 +168,7 @@ article {
       i {
         margin: 0 3px;
       }
-      @media screen and (max-width: 540px) {
+      @media screen and (max-width: 1024px) {
         visibility: visible;
       }
     }

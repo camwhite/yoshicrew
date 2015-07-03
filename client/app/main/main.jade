@@ -20,7 +20,7 @@ section
       span E
       span W
     .mushroom
-    h3(scroll-to="player-heading") insert coin
+    h3(scroll-to="player-heading" ng-click="powerUp()") insert coin
 
 article
   h1(id="player-heading") Listen to YO$#!
@@ -49,6 +49,8 @@ article
 
 .feeds
   h1 YO$#! Feeds
+  .youtube
+    youtube-video(class="embed-responsive-item" video-url="yoshiYT" player-width="'100%'" player-height="'600px'")
   .insta
     ui-instagram(user-id='176578740' client-id="5c46a2618d764034bb60e66cdb112ad9")
       .grams(ng-repeat="gram in grams | limitTo:12")
